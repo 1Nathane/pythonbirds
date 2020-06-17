@@ -96,8 +96,8 @@ O       L
 """
 class Carro:
     def __init__(self, direcao, motor):
-        self.motor = Motor()
-        self.direcao = Direcao()
+        self.motor = motor
+        self.direcao = direcao
 
     def calcular_velocidade(self):
         return self.motor.velocidade
@@ -117,10 +117,12 @@ class Carro:
     def girar_a_esquerda(self):
         self.direcao.girar_a_esquerda()
 
+
 NORTE = 'Norte'
 LESTE = 'Leste'
 OESTE = 'Oeste'
 SUL = 'Sul'
+
 class Motor:
     def __init__(self):
         self.velocidade = 0
