@@ -1,4 +1,5 @@
 class Pessoa:
+    olhos = 2
     def __init__(self,*filhos, nome = None, idade = 50):
         self.idade = idade
         self.nome = nome
@@ -6,6 +7,14 @@ class Pessoa:
 
     def cumprimentar(self):
         return f'Olá{id(self)}'
+
+    @staticmethod
+    def metodo_estatico():
+        return 45
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
 
 if __name__ == '__main__':
     nathane = Pessoa(nome = 'Nathane', idade = 27)
@@ -20,3 +29,5 @@ if __name__ == '__main__':
     print(f'Filhos de {luciano.nome}:')
     for filho in luciano.filhos:#Necessário porque os filhos de luciano são objetos da classe Pessoa
         print (filho.nome)
+    print(Pessoa.metodo_estatico(), nathane.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(),luciano.nome_e_atributos_de_classe())
