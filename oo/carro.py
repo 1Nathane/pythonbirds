@@ -147,11 +147,6 @@ class Direcao:
     def girar_a_esquerda(self):
         self.valor = self.rotacao_a_esquerda_dct[self.valor]
 
-
-
-
-
-
 pass
 
 
